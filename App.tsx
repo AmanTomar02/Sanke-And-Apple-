@@ -1,24 +1,9 @@
-import { StatusBar } from "react-native";
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>hello</Text>
-      <StatusBar
-        barStyle={"dark-content"}
-      />
-    </View>
-  )
+import "react-native-gesture-handler"
+import Game from "./src/component/Game"
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+const App = () => {
+  <GestureHandlerRootView style={{ flex: 1 }}>
+    <Game />
+  </GestureHandlerRootView>
 }
-const styles = StyleSheet.create({
-
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-
-})
+export default App;
